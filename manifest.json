@@ -1,0 +1,20 @@
+{
+	"name": "Dáme jídlo - filtrace minimálních objednávek",
+	"version": "0.1",
+	"description": "Rozšíření filtruje restaurace podle minimální objednávky.",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": ["https://www.damejidlo.cz/*"],
+			 "js": [
+			 	"content.js"
+			 ]
+		}
+	],
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_title": "Filtrace minimální objednávky",
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	}
+}
